@@ -1,0 +1,11 @@
+{{#if responseData.results}}
+{{#each responseData.results}}
+    <div class="news-article">
+        <h5><a href="{{this.link}}" target="_blank">{{{this.title}}}</a>
+        </h5> ({{{this.date}}})
+        <p>{{{this.content}}}</p>
+    </div>
+{{/each}}
+{{else}}
+    <div class="block-footer">{{str "LBL_NO_DATA_AVAILABLE"}}</div>
+{{/if}}
